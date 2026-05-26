@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   keywords: "restaurant libanais Lyon, mezzés, chawarma, street food Lyon 5, Le Cèdre Bleu, André Eid",
   icons: {
     icon: [
-      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.png", type: "image/png" },
     ],
   },
   openGraph: {
@@ -42,7 +42,7 @@ export default function RootLayout({
   return (
     <html lang="fr" suppressHydrationWarning className={`${inter.variable} ${playfair.variable} h-full`}>
       <head>
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href="/favicon.png" type="image/png" />
       </head>
       <body className="min-h-full flex flex-col antialiased bg-[#FAFAF8]">
         <LanguageProvider>
