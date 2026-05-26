@@ -95,6 +95,18 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(restaurantJsonLd) }}
         />
+        {/* Google Analytics */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-8N8ZMG5XXS" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-8N8ZMG5XXS');
+            `,
+          }}
+        />
       </head>
       <body className="min-h-full flex flex-col antialiased bg-[#FAFAF8]">
         <LanguageProvider>
