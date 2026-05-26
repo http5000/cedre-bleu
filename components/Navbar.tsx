@@ -104,31 +104,14 @@ export function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-3 shrink-0">
-              <svg
-                width="40"
-                height="40"
-                viewBox="0 0 100 100"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M50 10 L65 35 L80 25 L62 50 L75 45 L55 70 L65 65 L50 90 L35 65 L45 70 L25 45 L38 50 L20 25 L35 35 Z"
-                  fill="#1C3D6E"
-                />
-                <rect x="46" y="85" width="8" height="8" rx="2" fill="#C9A227" />
-              </svg>
-              <div>
-                <div
-                  className="text-[#1C3D6E] text-xl leading-tight"
-                  style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontStyle: "italic" }}
-                >
-                  Le Cèdre Bleu
-                </div>
-                <div className="text-[#C9A227] text-[10px] tracking-widest uppercase">
-                  Spécialités libanaises
-                </div>
-              </div>
+            <Link href="/" className="flex items-center shrink-0">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/logo-bleu.png"
+                alt="Le Cèdre Bleu"
+                height={52}
+                className="h-13 w-auto"
+              />
             </Link>
 
             {/* Desktop nav */}

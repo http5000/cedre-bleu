@@ -63,20 +63,29 @@ export default function LaCarte() {
   return (
     <>
       {/* HERO */}
-      <div className="bg-[#1C3D6E] text-white py-16 px-4 text-center">
-        <p className="text-[#C9A227] text-xs font-semibold uppercase tracking-widest mb-3">
-          Restaurant Libanais · Lyon 5
-        </p>
-        <h1
-          className="text-4xl md:text-5xl mb-4"
-          style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontStyle: "italic" }}
-        >
-          Notre Carte
-        </h1>
-        <p className="text-gray-300 max-w-xl mx-auto text-sm">
-          Toutes nos préparations sont 100% faites maison, disponibles en version végétarienne,
-          végétalienne, sans gluten et sans lactose à la demande.
-        </p>
+      <div className="relative text-white py-20 px-4 text-center overflow-hidden">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/images/food-4.jpg"
+          alt="Homous maison"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-[#1C3D6E]/80" />
+        <div className="relative">
+          <p className="text-[#C9A227] text-xs font-semibold uppercase tracking-widest mb-3">
+            Restaurant Libanais · Lyon 5
+          </p>
+          <h1
+            className="text-4xl md:text-5xl mb-4"
+            style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontStyle: "italic" }}
+          >
+            Notre Carte
+          </h1>
+          <p className="text-gray-300 max-w-xl mx-auto text-sm">
+            Toutes nos préparations sont 100% faites maison, disponibles en version végétarienne,
+            végétalienne, sans gluten et sans lactose à la demande.
+          </p>
+        </div>
       </div>
 
       {/* STICKY NAV */}

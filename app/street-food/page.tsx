@@ -61,24 +61,33 @@ export default function StreetFood() {
   return (
     <div className="bg-[#0d1f3a] min-h-screen">
       {/* HERO */}
-      <div className="bg-gradient-to-b from-[#1C3D6E] to-[#0d1f3a] text-white py-20 px-4 text-center">
-        <div className="inline-flex items-center gap-2 bg-[#C9A227]/20 text-[#C9A227] text-xs font-semibold uppercase tracking-widest px-4 py-2 rounded-full mb-6">
-          <span>🥙</span>
-          <span>Rapide · Savoureux · Libanais</span>
+      <div className="relative text-white py-24 px-4 text-center overflow-hidden">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/images/sf-1.png"
+          alt="Street food libanais"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0d1f3a]/75 to-[#0d1f3a]/90" />
+        <div className="relative">
+          <div className="inline-flex items-center gap-2 bg-[#C9A227]/20 text-[#C9A227] text-xs font-semibold uppercase tracking-widest px-4 py-2 rounded-full mb-6">
+            <span>🥙</span>
+            <span>Rapide · Savoureux · Libanais</span>
+          </div>
+          <h1
+            className="text-5xl md:text-6xl text-white mb-4"
+            style={{
+              fontFamily: "var(--font-playfair), Georgia, serif",
+              fontStyle: "italic",
+            }}
+          >
+            Street Food
+          </h1>
+          <p className="text-blue-200 max-w-xl mx-auto">
+            Le meilleur de la cuisine libanaise dans un format rapide. Mêmes produits frais,
+            même amour du fait maison.
+          </p>
         </div>
-        <h1
-          className="text-5xl md:text-6xl text-white mb-4"
-          style={{
-            fontFamily: "var(--font-playfair), Georgia, serif",
-            fontStyle: "italic",
-          }}
-        >
-          Street Food
-        </h1>
-        <p className="text-blue-200 max-w-xl mx-auto">
-          Le meilleur de la cuisine libanaise dans un format rapide. Mêmes produits frais,
-          même amour du fait maison.
-        </p>
       </div>
 
       {/* STICKY NAV */}

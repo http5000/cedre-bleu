@@ -14,19 +14,28 @@ export default function Contact() {
   return (
     <>
       {/* HERO */}
-      <div className="bg-[#1C3D6E] text-white py-16 px-4 text-center">
-        <p className="text-[#C9A227] text-xs font-semibold uppercase tracking-widest mb-3">
-          Nous rejoindre
-        </p>
-        <h1
-          className="text-4xl md:text-5xl mb-4"
-          style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontStyle: "italic" }}
-        >
-          Contact &amp; Accès
-        </h1>
-        <p className="text-gray-300 max-w-xl mx-auto text-sm">
-          10 quai Romain Rolland, 69005 Lyon — Au cœur de Lyon 5
-        </p>
+      <div className="relative text-white py-20 px-4 text-center overflow-hidden">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/images/food-7.jpg"
+          alt="Taboulé maison"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-[#1C3D6E]/80" />
+        <div className="relative">
+          <p className="text-[#C9A227] text-xs font-semibold uppercase tracking-widest mb-3">
+            Nous rejoindre
+          </p>
+          <h1
+            className="text-4xl md:text-5xl mb-4"
+            style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontStyle: "italic" }}
+          >
+            Contact &amp; Accès
+          </h1>
+          <p className="text-gray-300 max-w-xl mx-auto text-sm">
+            10 quai Romain Rolland, 69005 Lyon — Au cœur de Lyon 5
+          </p>
+        </div>
       </div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16">

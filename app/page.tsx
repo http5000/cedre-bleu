@@ -9,24 +9,22 @@ export default function Home() {
     <>
       {/* HERO */}
       <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden bg-[#0d1f3a]">
-        <div
-          className="absolute inset-0 opacity-15"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C9A227' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-          }}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/images/food-assiette.jpg"
+          alt="Grillades libanaises"
+          className="absolute inset-0 w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0d1f3a]/60 via-[#1C3D6E]/40 to-[#0d1f3a]/80" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0d1f3a]/70 via-[#0d1f3a]/50 to-[#0d1f3a]/90" />
 
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-          <div className="flex justify-center mb-6">
-            <svg width="72" height="72" viewBox="0 0 100 100" fill="none">
-              <path
-                d="M50 10 L65 35 L80 25 L62 50 L75 45 L55 70 L65 65 L50 90 L35 65 L45 70 L25 45 L38 50 L20 25 L35 35 Z"
-                fill="white"
-                opacity="0.9"
-              />
-              <rect x="46" y="85" width="8" height="8" rx="2" fill="#C9A227" />
-            </svg>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <div className="flex justify-center mb-8">
+            <img
+              src="/images/logo-bleu.png"
+              alt="Le Cèdre Bleu"
+              className="h-20 w-auto brightness-0 invert"
+            />
           </div>
 
           <p className="text-[#C9A227] text-sm font-semibold uppercase tracking-[0.3em] mb-3">
@@ -197,57 +195,90 @@ export default function Home() {
                 "Dans un décor chaleureux, nous vous accueillons sans prétention autour d&apos;une
                 cuisine faite de nos mains avec amour et convivialité."
               </blockquote>
-              <p className="text-gray-600 leading-relaxed mb-6">
+              <p className="text-gray-600 leading-relaxed mb-8">
                 André et Mary Eid vous ouvrent les portes de leur restaurant comme l&apos;on
                 accueille un ami ou les membres de sa famille. Tout est mis en œuvre pour vous
                 faire passer un agréable moment autour des saveurs authentiques du Liban.
               </p>
-              <p
-                className="text-[#1C3D6E] font-semibold italic"
-                style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
-              >
-                — André &amp; Mary Eid
-              </p>
+
+              {/* André & Mary */}
+              <div className="flex gap-4">
+                <div className="flex items-center gap-3">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="/images/food-mezze.jpg"
+                    alt="André Eid"
+                    className="w-14 h-14 rounded-full object-cover object-top border-2 border-[#C9A227]"
+                  />
+                  <div>
+                    <div className="font-semibold text-[#1C3D6E] text-sm">André Eid</div>
+                    <div className="text-xs text-gray-500">Chef & fondateur</div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="/images/food-2.jpg"
+                    alt="Mary Eid"
+                    className="w-14 h-14 rounded-full object-cover object-top border-2 border-[#C9A227]"
+                  />
+                  <div>
+                    <div className="font-semibold text-[#1C3D6E] text-sm">Mary Eid</div>
+                    <div className="text-xs text-gray-500">Co-fondatrice</div>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
-              <div className="bg-[#1C3D6E] text-white rounded-2xl p-8 text-center">
-                <div
-                  className="text-5xl font-bold text-[#C9A227] mb-2"
-                  style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
-                >
-                  100%
-                </div>
-                <div className="text-sm text-gray-300">Fait maison</div>
-              </div>
-              <div className="bg-gray-50 rounded-2xl p-8 text-center">
-                <div
-                  className="text-5xl font-bold text-[#1C3D6E] mb-2"
-                  style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
-                >
-                  10+
-                </div>
-                <div className="text-sm text-gray-500">Années de passion</div>
-              </div>
-              <div className="bg-gray-50 rounded-2xl p-8 text-center">
-                <div
-                  className="text-4xl font-bold text-[#C9A227] mb-2"
-                  style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
-                >
-                  ♥
-                </div>
-                <div className="text-sm text-gray-500">Végé &amp; sans gluten dispo</div>
-              </div>
-              <div className="bg-[#C9A227] text-white rounded-2xl p-8 text-center">
-                <div
-                  className="text-3xl font-bold mb-2"
-                  style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
-                >
-                  Lyon 5
-                </div>
-                <div className="text-sm text-yellow-100">Quai Romain Rolland</div>
-              </div>
+            <div className="grid grid-cols-2 gap-3">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/images/food-4.jpg" alt="Homous" className="rounded-2xl w-full h-48 object-cover" />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/images/food-7.jpg" alt="Taboulé" className="rounded-2xl w-full h-48 object-cover" />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/images/food-3.jpg" alt="Rikakat" className="rounded-2xl w-full h-48 object-cover" />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/images/food-9.jpg" alt="Moutabal" className="rounded-2xl w-full h-48 object-cover" />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* GALERIE */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <p className="text-[#C9A227] text-xs font-semibold uppercase tracking-widest mb-2">
+              Notre cuisine
+            </p>
+            <h2
+              className="text-[#1C3D6E] text-4xl"
+              style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
+            >
+              Galerie
+            </h2>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            {[
+              { src: "/images/food-assiette.jpg", alt: "Assiette grillades" },
+              { src: "/images/food-5.jpg", alt: "Kebbé boulette" },
+              { src: "/images/food-6.jpg", alt: "Kebbé" },
+              { src: "/images/hero-viande.jpg", alt: "Kebbé nayé" },
+              { src: "/images/food-8.jpg", alt: "Spécialité libanaise" },
+              { src: "/images/food-10.jpg", alt: "Mezzé" },
+              { src: "/images/food-11.jpg", alt: "Moussaka" },
+              { src: "/images/manakiche.jpg", alt: "Manakiche zaatar" },
+            ].map((img) => (
+              <div key={img.src} className="aspect-square overflow-hidden rounded-xl">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  loading="lazy"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </section>
