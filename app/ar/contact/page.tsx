@@ -4,11 +4,11 @@ import { ContactContent } from "@/components/contact-content";
 const BASE_URL = "https://cedre-bleu.pages.dev";
 
 export const metadata: Metadata = {
-  title: "Contact & Accès | Le Cèdre Bleu – Restaurant Libanais Lyon 5",
+  title: "اتصل بنا والوصول | سيدر بلو – مطعم لبناني ليون 5",
   description:
-    "Contactez Le Cèdre Bleu. Adresse : 10 quai Romain Rolland, Lyon 5. Tél : 04 72 56 06 08. Accès transports, parking, carte.",
+    "تواصل مع سيدر بلو. العنوان: 10 كاي رومان رولان، ليون 5. هاتف: 04 72 56 06 08. وسائل النقل، مواقف السيارات والخريطة.",
   alternates: {
-    canonical: `${BASE_URL}/contact`,
+    canonical: `${BASE_URL}/ar/contact`,
     languages: {
       fr: `${BASE_URL}/contact`,
       en: `${BASE_URL}/en/contact`,
@@ -17,6 +17,6 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Contact() {
+export default function ContactAr() {
   return <ContactContent />;
 }

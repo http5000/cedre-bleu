@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import { Phone, Menu, X } from "lucide-react";
 import { useI18n, type Locale } from "@/lib/i18n";
 
@@ -12,6 +13,8 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const { locale, setLocale, t } = useI18n();
+  const pathname = usePathname();
+  const router = useRouter();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -19,13 +22,32 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Build locale-prefixed path helper
+  const p = (path: string) => {
+    if (locale === "fr") return path;
+    return path === "/" ? `/${locale}` : `/${locale}${path}`;
+  };
+
   const navLinks = [
-    { label: t.nav.home, href: "/" },
-    { label: t.nav.carte, href: "/la-carte" },
-    { label: t.nav.streetfood, href: "/street-food", highlight: true },
-    { label: t.nav.venir, href: "/contact#acces" },
-    { label: t.nav.contact, href: "/contact" },
+    { label: t.nav.home, href: p("/") },
+    { label: t.nav.carte, href: p("/la-carte") },
+    { label: t.nav.streetfood, href: p("/street-food"), highlight: true },
+    { label: t.nav.venir, href: `${p("/contact")}#acces` },
+    { label: t.nav.contact, href: p("/contact") },
   ];
+
+  const switchLocale = (newLocale: Locale) => {
+    setLocale(newLocale);
+    // Strip current locale prefix to get the base path
+    const basePath = pathname.replace(/^\/(en|ar)(\/|$)/, "/") || "/";
+    const newPath =
+      newLocale === "fr"
+        ? basePath
+        : basePath === "/"
+        ? `/${newLocale}`
+        : `/${newLocale}${basePath}`;
+    router.push(newPath);
+  };
 
   return (
     <>
@@ -132,7 +154,7 @@ export function Navbar() {
                 {(["fr", "en", "ar"] as Locale[]).map((loc) => (
                   <button
                     key={loc}
-                    onClick={() => setLocale(loc)}
+                    onClick={() => switchLocale(loc)}
                     className={`px-2.5 py-1 text-xs font-bold rounded-full transition-colors ${
                       locale === loc
                         ? "bg-white text-[#1C3D6E] shadow-sm"
@@ -189,7 +211,7 @@ export function Navbar() {
                 {(["fr", "en", "ar"] as Locale[]).map((loc) => (
                   <button
                     key={loc}
-                    onClick={() => { setLocale(loc); setMobileOpen(false); }}
+                    onClick={() => { switchLocale(loc); setMobileOpen(false); }}
                     className={`flex-1 py-2 text-xs font-bold rounded-lg transition-colors ${
                       locale === loc
                         ? "bg-[#1C3D6E] text-white"

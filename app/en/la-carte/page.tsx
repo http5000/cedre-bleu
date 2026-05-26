@@ -4,11 +4,11 @@ import { LaCarteContent } from "@/components/la-carte-content";
 const BASE_URL = "https://cedre-bleu.pages.dev";
 
 export const metadata: Metadata = {
-  title: "La Carte | Le Cèdre Bleu – Restaurant Libanais Lyon 5",
+  title: "Menu | Le Cèdre Bleu – Lebanese Restaurant Lyon 5",
   description:
-    "Découvrez notre carte : mezzés froids et chauds, menus libanais, grillades, desserts et boissons. Tout 100% fait maison.",
+    "Full menu of Le Cèdre Bleu: cold & hot mezze, grills, set menus and desserts. 100% homemade, gluten-free and vegan options available on request.",
   alternates: {
-    canonical: `${BASE_URL}/la-carte`,
+    canonical: `${BASE_URL}/en/la-carte`,
     languages: {
       fr: `${BASE_URL}/la-carte`,
       en: `${BASE_URL}/en/la-carte`,
@@ -17,6 +17,6 @@ export const metadata: Metadata = {
   },
 };
 
-export default function LaCarte() {
+export default function LaCarteEn() {
   return <LaCarteContent />;
 }

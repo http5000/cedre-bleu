@@ -1424,16 +1424,12 @@ const RTL_LOCALES: Locale[] = ["ar"];
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [locale, setLocaleState] = useState<Locale>(DEFAULT_LOCALE);
 
-  // Initialise from localStorage on mount (client-side only)
+  // Detect locale from URL path — URL is the source of truth
   useEffect(() => {
-    try {
-      const stored = localStorage.getItem(STORAGE_KEY) as Locale | null;
-      if (stored && (stored === "fr" || stored === "en" || stored === "ar")) {
-        setLocaleState(stored);
-      }
-    } catch {
-      // localStorage unavailable (SSR / private browsing) — keep default
-    }
+    const path = window.location.pathname;
+    if (path.startsWith("/en")) setLocaleState("en");
+    else if (path.startsWith("/ar")) setLocaleState("ar");
+    else setLocaleState("fr");
   }, []);
 
   // Sync document attributes whenever locale changes
@@ -1443,11 +1439,6 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   }, [locale]);
 
   const setLocale = (newLocale: Locale) => {
-    try {
-      localStorage.setItem(STORAGE_KEY, newLocale);
-    } catch {
-      // ignore
-    }
     setLocaleState(newLocale);
   };
 

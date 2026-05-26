@@ -4,11 +4,11 @@ import { StreetFoodContent } from "@/components/street-food-content";
 const BASE_URL = "https://cedre-bleu.pages.dev";
 
 export const metadata: Metadata = {
-  title: "Street Food | Le Cèdre Bleu – Sandwichs & Formules Lyon 5",
+  title: "Street Food | Le Cèdre Bleu – Wraps & Combos Lyon 5",
   description:
-    "Chawarma, falafel, manakiches et formules street food libanaise à Lyon 5. Même qualité maison, format rapide.",
+    "Shawarma, falafel, manakish and street food combos from Le Cèdre Bleu in Lyon 5. Same homemade quality, quick format.",
   alternates: {
-    canonical: `${BASE_URL}/street-food`,
+    canonical: `${BASE_URL}/en/street-food`,
     languages: {
       fr: `${BASE_URL}/street-food`,
       en: `${BASE_URL}/en/street-food`,
@@ -17,6 +17,6 @@ export const metadata: Metadata = {
   },
 };
 
-export default function StreetFood() {
+export default function StreetFoodEn() {
   return <StreetFoodContent />;
 }

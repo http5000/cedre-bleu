@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cedre-bleu.pages.dev/sitemap.xml

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- French (canonical) -->
+  <url>
+    <loc>https://cedre-bleu.pages.dev/</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://cedre-bleu.pages.dev/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cedre-bleu.pages.dev/en/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cedre-bleu.pages.dev/ar/"/>
+  </url>
+  <url>
+    <loc>https://cedre-bleu.pages.dev/la-carte/</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://cedre-bleu.pages.dev/la-carte/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cedre-bleu.pages.dev/en/la-carte/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cedre-bleu.pages.dev/ar/la-carte/"/>
+  </url>
+  <url>
+    <loc>https://cedre-bleu.pages.dev/street-food/</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://cedre-bleu.pages.dev/street-food/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cedre-bleu.pages.dev/en/street-food/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cedre-bleu.pages.dev/ar/street-food/"/>
+  </url>
+  <url>
+    <loc>https://cedre-bleu.pages.dev/contact/</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://cedre-bleu.pages.dev/contact/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cedre-bleu.pages.dev/en/contact/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cedre-bleu.pages.dev/ar/contact/"/>
+  </url>
+
+  <!-- English -->
+  <url>
+    <loc>https://cedre-bleu.pages.dev/en/</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://cedre-bleu.pages.dev/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cedre-bleu.pages.dev/en/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cedre-bleu.pages.dev/ar/"/>
+  </url>
+  <url>
+    <loc>https://cedre-bleu.pages.dev/en/la-carte/</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://cedre-bleu.pages.dev/la-carte/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cedre-bleu.pages.dev/en/la-carte/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cedre-bleu.pages.dev/ar/la-carte/"/>
+  </url>
+  <url>
+    <loc>https://cedre-bleu.pages.dev/en/street-food/</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://cedre-bleu.pages.dev/street-food/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cedre-bleu.pages.dev/en/street-food/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cedre-bleu.pages.dev/ar/street-food/"/>
+  </url>
+  <url>
+    <loc>https://cedre-bleu.pages.dev/en/contact/</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://cedre-bleu.pages.dev/contact/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cedre-bleu.pages.dev/en/contact/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cedre-bleu.pages.dev/ar/contact/"/>
+  </url>
+
+  <!-- Arabic -->
+  <url>
+    <loc>https://cedre-bleu.pages.dev/ar/</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://cedre-bleu.pages.dev/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cedre-bleu.pages.dev/en/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cedre-bleu.pages.dev/ar/"/>
+  </url>
+  <url>
+    <loc>https://cedre-bleu.pages.dev/ar/la-carte/</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://cedre-bleu.pages.dev/la-carte/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cedre-bleu.pages.dev/en/la-carte/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cedre-bleu.pages.dev/ar/la-carte/"/>
+  </url>
+  <url>
+    <loc>https://cedre-bleu.pages.dev/ar/street-food/</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://cedre-bleu.pages.dev/street-food/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cedre-bleu.pages.dev/en/street-food/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cedre-bleu.pages.dev/ar/street-food/"/>
+  </url>
+  <url>
+    <loc>https://cedre-bleu.pages.dev/ar/contact/</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://cedre-bleu.pages.dev/contact/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cedre-bleu.pages.dev/en/contact/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cedre-bleu.pages.dev/ar/contact/"/>
+  </url>
+
+</urlset>
