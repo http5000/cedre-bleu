@@ -1,26 +1,54 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --navy-700: #1C3D6E;
+  --navy-800: #152f55;
+  --navy-900: #0d1f3a;
+  --gold-500: #C9A227;
+  --gold-400: #d4a843;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-navy-50: #e8eef7;
+  --color-navy-100: #c5d5eb;
+  --color-navy-200: #9fb9dd;
+  --color-navy-300: #789dce;
+  --color-navy-400: #5a87c3;
+  --color-navy-500: #3c71b8;
+  --color-navy-600: #2d5a9a;
+  --color-navy-700: #1C3D6E;
+  --color-navy-800: #152f55;
+  --color-navy-900: #0d1f3a;
+  --color-gold-300: #e8c96a;
+  --color-gold-400: #d4a843;
+  --color-gold-500: #C9A227;
+  --color-gold-600: #a88220;
+  --color-gold-700: #876418;
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-playfair);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    color: #1a1a1a;
+    background: #ffffff;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  }
+
+  .text-shadow-sm {
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  }
+
+  .font-display {
+    font-family: var(--font-playfair), Georgia, serif;
+  }
 }
