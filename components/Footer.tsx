@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import { Phone, MapPin } from "lucide-react";
+import { useI18n } from "@/lib/i18n";
 
 const RESERVATION_URL =
   "https://booking.ureserve.co/shop/external-booking/le-cedre-bleu?fullpage=true";
@@ -47,6 +50,10 @@ const SOCIALS = [
 ];
 
 export function Footer() {
+  const { t } = useI18n();
+  const f = t.footer;
+  const nav = t.nav;
+
   return (
     <footer className="bg-[#0d1f3a] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-10">
@@ -61,7 +68,7 @@ export function Footer() {
               className="h-12 w-auto mb-4 brightness-0 invert"
             />
             <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
-              Restaurant libanais authentique à Lyon 5. Une cuisine faite maison avec amour et convivialité, par André &amp; Mary Eid.
+              {f.tagline}
             </p>
             <div className="flex gap-2.5 mt-5">
               {SOCIALS.map((s) => (
@@ -82,15 +89,15 @@ export function Footer() {
           {/* Navigation */}
           <div>
             <p className="text-[#C9A227] text-[10px] font-semibold uppercase tracking-[0.2em] mb-5">
-              Navigation
+              {f.navigation}
             </p>
             <ul className="space-y-2.5">
               {[
-                { label: "Accueil", href: "/" },
-                { label: "La carte", href: "/la-carte" },
-                { label: "Street Food", href: "/street-food" },
-                { label: "Venir au restaurant", href: "/contact#acces" },
-                { label: "Contact", href: "/contact" },
+                { label: nav.home, href: "/" },
+                { label: nav.carte, href: "/la-carte" },
+                { label: nav.streetfood, href: "/street-food" },
+                { label: nav.venir, href: "/contact#acces" },
+                { label: nav.contact, href: "/contact" },
               ].map((l) => (
                 <li key={l.href}>
                   <Link
@@ -104,36 +111,36 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Horaires — deux univers côte à côte */}
+          {/* Horaires */}
           <div>
             <p className="text-[#C9A227] text-[10px] font-semibold uppercase tracking-[0.2em] mb-5">
-              Horaires
+              {f.horaires}
             </p>
             <div className="grid grid-cols-2 gap-6">
               {/* Restaurant */}
               <div>
                 <p className="text-white text-xs font-semibold mb-3 flex items-center gap-1.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#C9A227] inline-block" />
-                  Restaurant
+                  {f.restaurant}
                 </p>
                 <div className="space-y-2 text-xs text-gray-400">
                   <div className="flex justify-between gap-3">
-                    <span>Lundi</span>
-                    <span className="text-gray-600 italic">Fermé</span>
+                    <span>{f.lundi}</span>
+                    <span className="text-gray-600 italic">{f.ferme}</span>
                   </div>
                   <div>
                     <div className="flex justify-between gap-3">
-                      <span className="shrink-0">Mar — Sam</span>
+                      <span className="shrink-0">{f.marSam}</span>
                       <span className="text-right text-gray-300">
-                        11h30 – 14h30
+                        11h30 - 14h30
                         <br />
-                        19h00 – 22h00
+                        19h00 - 22h00
                       </span>
                     </div>
                   </div>
                   <div className="flex justify-between gap-3">
-                    <span>Dimanche</span>
-                    <span className="text-gray-600 italic">Fermé</span>
+                    <span>{f.dimanche}</span>
+                    <span className="text-gray-600 italic">{f.ferme}</span>
                   </div>
                 </div>
               </div>
@@ -142,20 +149,20 @@ export function Footer() {
               <div>
                 <p className="text-white text-xs font-semibold mb-3 flex items-center gap-1.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-white/40 inline-block" />
-                  Street Food
+                  {f.streetfood}
                 </p>
                 <div className="space-y-2 text-xs text-gray-400">
                   <div className="flex justify-between gap-3">
-                    <span>Lundi</span>
-                    <span className="text-gray-600 italic">Fermé</span>
+                    <span>{f.lundi}</span>
+                    <span className="text-gray-600 italic">{f.ferme}</span>
                   </div>
                   <div className="flex justify-between gap-3">
-                    <span className="shrink-0">Mar — Sam</span>
-                    <span className="text-gray-300">19h00 – 22h00</span>
+                    <span className="shrink-0">{f.marSam}</span>
+                    <span className="text-gray-300">19h00 - 22h00</span>
                   </div>
                   <div className="flex justify-between gap-3">
-                    <span>Dimanche</span>
-                    <span className="text-gray-600 italic">Fermé</span>
+                    <span>{f.dimanche}</span>
+                    <span className="text-gray-600 italic">{f.ferme}</span>
                   </div>
                 </div>
               </div>
@@ -165,7 +172,7 @@ export function Footer() {
           {/* Contact */}
           <div>
             <p className="text-[#C9A227] text-[10px] font-semibold uppercase tracking-[0.2em] mb-5">
-              Nous trouver
+              {f.nousTraouver}
             </p>
             <div className="space-y-3.5 text-sm text-gray-400 mb-6">
               <div className="flex gap-2.5 items-start">
@@ -199,7 +206,7 @@ export function Footer() {
               rel="noopener noreferrer"
               className="inline-block px-5 py-2.5 bg-[#C9A227] text-white text-sm font-semibold rounded-full hover:bg-[#a88220] transition-colors duration-200"
             >
-              Réserver une table
+              {f.reserverTable}
             </a>
           </div>
         </div>
@@ -207,9 +214,9 @@ export function Footer() {
 
       <div className="border-t border-white/[0.07]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-gray-600">
-          <span>© {new Date().getFullYear()} Le Cèdre Bleu — Tous droits réservés</span>
+          <span>© {new Date().getFullYear()} Le Cèdre Bleu — {f.droits}</span>
           <span>
-            Réalisation{" "}
+            {f.realisation}{" "}
             <a href="https://yumea.fr" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400 transition-colors">
               Yumea.fr
             </a>

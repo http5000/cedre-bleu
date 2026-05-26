@@ -3,14 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Phone, Menu, X } from "lucide-react";
-
-const NAV_LINKS = [
-  { label: "Accueil", href: "/" },
-  { label: "La carte", href: "/la-carte" },
-  { label: "Street Food", href: "/street-food", highlight: true },
-  { label: "Venir au restaurant", href: "/contact#acces" },
-  { label: "Contact", href: "/contact" },
-];
+import { useI18n, type Locale } from "@/lib/i18n";
 
 const RESERVATION_URL =
   "https://booking.ureserve.co/shop/external-booking/le-cedre-bleu?fullpage=true";
@@ -18,12 +11,21 @@ const RESERVATION_URL =
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { locale, setLocale, t } = useI18n();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  const navLinks = [
+    { label: t.nav.home, href: "/" },
+    { label: t.nav.carte, href: "/la-carte" },
+    { label: t.nav.streetfood, href: "/street-food", highlight: true },
+    { label: t.nav.venir, href: "/contact#acces" },
+    { label: t.nav.contact, href: "/contact" },
+  ];
 
   return (
     <>
@@ -60,7 +62,7 @@ export function Navbar() {
             aria-label="TripAdvisor"
           >
             <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12.006 4.295c-2.67 0-5.338.784-7.645 2.353H0l1.757 1.916a5.645 5.645 0 0 0-.754 2.797 5.666 5.666 0 0 0 5.666 5.665 5.63 5.63 0 0 0 3.755-1.43l1.582 1.723 1.582-1.723a5.63 5.63 0 0 0 3.755 1.43 5.666 5.666 0 0 0 5.666-5.665 5.645 5.645 0 0 0-.754-2.797L24 6.648h-4.361c-2.307-1.569-4.974-2.353-7.633-2.353zm0 1.57c1.73 0 3.432.397 4.966 1.134a8.829 8.829 0 0 0-4.966-1.5 8.83 8.83 0 0 0-4.967 1.5c1.535-.737 3.237-1.134 4.967-1.134zm-5.34 1.53a5.643 5.643 0 1 1 0 11.287 5.643 5.643 0 0 1 0-11.286zm10.68 0a5.643 5.643 0 1 1 0 11.287 5.643 5.643 0 0 1 0-11.286zm-10.68 1.57a4.074 4.074 0 1 0 0 8.148 4.074 4.074 0 0 0 0-8.148zm10.68 0a4.074 4.074 0 1 0 0 8.148 4.074 4.074 0 0 0 0-8.148zm-10.68 1.458a2.616 2.616 0 1 1 0 5.232 2.616 2.616 0 0 1 0-5.232zm10.68 0a2.616 2.616 0 1 1 0 5.232 2.616 2.616 0 0 1 0-5.232zm-10.68 1.07a1.546 1.546 0 1 0 0 3.092 1.546 1.546 0 0 0 0-3.091zm10.68 0a1.546 1.546 0 1 0 0 3.092 1.546 1.546 0 0 0 0-3.091z" />
+              <path d="M12.006 4.295c-2.67 0-5.338.784-7.645 2.353H0l1.757 1.916a5.645 5.645 0 0 0-.754 2.797 5.666 5.666 0 0 0 5.666 5.665 5.63 5.63 0 0 0 3.755-1.43l1.582 1.723 1.582-1.723a5.63 5.63 0 0 0 3.755 1.43 5.666 5.666 0 0 0 5.666-5.665 5.645 5.645 0 0 0-.754-2.797L24 6.648h-4.361c-2.307-1.569-4.974-2.353-7.633-2.353zm-5.34 3.1a5.643 5.643 0 1 1 0 11.287 5.643 5.643 0 0 1 0-11.286zm10.68 0a5.643 5.643 0 1 1 0 11.287 5.643 5.643 0 0 1 0-11.286zm-10.68 1.57a4.074 4.074 0 1 0 0 8.148 4.074 4.074 0 0 0 0-8.148zm10.68 0a4.074 4.074 0 1 0 0 8.148 4.074 4.074 0 0 0 0-8.148zm-10.68 1.458a2.616 2.616 0 1 1 0 5.232 2.616 2.616 0 0 1 0-5.232zm10.68 0a2.616 2.616 0 1 1 0 5.232 2.616 2.616 0 0 1 0-5.232zm-10.68 1.07a1.546 1.546 0 1 0 0 3.092 1.546 1.546 0 0 0 0-3.091zm10.68 0a1.546 1.546 0 1 0 0 3.092 1.546 1.546 0 0 0 0-3.091z" />
             </svg>
           </a>
           <a
@@ -105,7 +107,7 @@ export function Navbar() {
 
             {/* Desktop nav */}
             <div className="hidden lg:flex items-center gap-1">
-              {NAV_LINKS.map((link) =>
+              {navLinks.map((link) =>
                 link.highlight ? (
                   <Link
                     key={link.href}
@@ -125,13 +127,30 @@ export function Navbar() {
                 )
               )}
 
+              {/* Language switcher */}
+              <div className="flex items-center gap-0.5 ml-3 bg-gray-100 rounded-full p-1">
+                {(["fr", "en", "ar"] as Locale[]).map((loc) => (
+                  <button
+                    key={loc}
+                    onClick={() => setLocale(loc)}
+                    className={`px-2.5 py-1 text-xs font-bold rounded-full transition-colors ${
+                      locale === loc
+                        ? "bg-white text-[#1C3D6E] shadow-sm"
+                        : "text-gray-400 hover:text-gray-600"
+                    }`}
+                  >
+                    {loc.toUpperCase()}
+                  </button>
+                ))}
+              </div>
+
               <a
                 href={RESERVATION_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="ml-4 px-5 py-2 bg-[#C9A227] text-white text-sm font-semibold rounded-full hover:bg-[#a88220] transition-colors shadow-sm"
+                className="ml-3 px-5 py-2 bg-[#C9A227] text-white text-sm font-semibold rounded-full hover:bg-[#a88220] transition-colors shadow-sm"
               >
-                Réserver une table
+                {t.nav.reserver}
               </a>
             </div>
 
@@ -150,7 +169,7 @@ export function Navbar() {
         {mobileOpen && (
           <div className="lg:hidden border-t bg-white px-4 pb-4">
             <div className="flex flex-col gap-1 pt-2">
-              {NAV_LINKS.map((link) => (
+              {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
@@ -164,13 +183,31 @@ export function Navbar() {
                   {link.label}
                 </Link>
               ))}
+
+              {/* Language switcher mobile */}
+              <div className="flex items-center gap-1 mt-2 pt-2 border-t border-gray-100">
+                {(["fr", "en", "ar"] as Locale[]).map((loc) => (
+                  <button
+                    key={loc}
+                    onClick={() => { setLocale(loc); setMobileOpen(false); }}
+                    className={`flex-1 py-2 text-xs font-bold rounded-lg transition-colors ${
+                      locale === loc
+                        ? "bg-[#1C3D6E] text-white"
+                        : "bg-gray-100 text-gray-500 hover:bg-gray-200"
+                    }`}
+                  >
+                    {loc.toUpperCase()}
+                  </button>
+                ))}
+              </div>
+
               <a
                 href={RESERVATION_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-2 px-4 py-2.5 bg-[#C9A227] text-white text-sm font-semibold rounded-full text-center hover:bg-[#a88220] transition-colors"
+                className="mt-1 px-4 py-2.5 bg-[#C9A227] text-white text-sm font-semibold rounded-full text-center hover:bg-[#a88220] transition-colors"
               >
-                Réserver une table
+                {t.nav.reserver}
               </a>
             </div>
           </div>
