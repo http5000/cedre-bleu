@@ -89,7 +89,7 @@ export default function LaCarte() {
       </div>
 
       {/* STICKY NAV */}
-      <nav className="sticky top-[112px] z-40 bg-white border-b shadow-sm">
+      <nav className="sticky top-16 z-40 bg-white border-b shadow-sm">
         <div className="max-w-5xl mx-auto px-4 flex overflow-x-auto gap-1 py-2">
           {NAV_SECTIONS.map((s) => (
             <a

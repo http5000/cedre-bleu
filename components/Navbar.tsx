@@ -2,21 +2,11 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Phone, Menu, X, ChevronDown } from "lucide-react";
+import { Phone, Menu, X } from "lucide-react";
 
 const NAV_LINKS = [
   { label: "Accueil", href: "/" },
-  {
-    label: "La carte",
-    href: "/la-carte",
-    children: [
-      { label: "Formules & Mezzés", href: "/la-carte#formules" },
-      { label: "Menus", href: "/la-carte#menus" },
-      { label: "Grillades", href: "/la-carte#grillades" },
-      { label: "Desserts", href: "/la-carte#desserts" },
-      { label: "Boissons", href: "/la-carte#boissons" },
-    ],
-  },
+  { label: "La carte", href: "/la-carte" },
   { label: "Street Food", href: "/street-food", highlight: true },
   { label: "Venir au restaurant", href: "/contact#acces" },
   { label: "Contact", href: "/contact" },
@@ -28,7 +18,6 @@ const RESERVATION_URL =
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [carteOpen, setCarteOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -109,41 +98,15 @@ export function Navbar() {
               <img
                 src="/images/logo-bleu.png"
                 alt="Le Cèdre Bleu"
-                height={52}
-                className="h-13 w-auto"
+                height={44}
+                className="h-11 w-auto"
               />
             </Link>
 
             {/* Desktop nav */}
             <div className="hidden lg:flex items-center gap-1">
               {NAV_LINKS.map((link) =>
-                link.children ? (
-                  <div key={link.href} className="relative group">
-                    <button
-                      className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-gray-700 hover:text-[#1C3D6E] transition-colors"
-                      onMouseEnter={() => setCarteOpen(true)}
-                      onMouseLeave={() => setCarteOpen(false)}
-                    >
-                      {link.label}
-                      <ChevronDown className="w-3.5 h-3.5" />
-                    </button>
-                    <div
-                      className="absolute top-full left-0 bg-white shadow-lg border rounded-lg py-2 min-w-[200px] opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity duration-150"
-                      onMouseEnter={() => setCarteOpen(true)}
-                      onMouseLeave={() => setCarteOpen(false)}
-                    >
-                      {link.children.map((child) => (
-                        <Link
-                          key={child.href}
-                          href={child.href}
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-navy-50 hover:text-[#1C3D6E] transition-colors"
-                        >
-                          {child.label}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                ) : link.highlight ? (
+                link.highlight ? (
                   <Link
                     key={link.href}
                     href={link.href}
@@ -187,38 +150,20 @@ export function Navbar() {
         {mobileOpen && (
           <div className="lg:hidden border-t bg-white px-4 pb-4">
             <div className="flex flex-col gap-1 pt-2">
-              {NAV_LINKS.map((link) =>
-                link.children ? (
-                  <div key={link.href}>
-                    <div className="px-3 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">
-                      La carte
-                    </div>
-                    {link.children.map((child) => (
-                      <Link
-                        key={child.href}
-                        href={child.href}
-                        onClick={() => setMobileOpen(false)}
-                        className="block px-6 py-2 text-sm text-gray-600 hover:text-[#1C3D6E]"
-                      >
-                        {child.label}
-                      </Link>
-                    ))}
-                  </div>
-                ) : (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    onClick={() => setMobileOpen(false)}
-                    className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
-                      link.highlight
-                        ? "bg-[#1C3D6E] text-white"
-                        : "text-gray-700 hover:text-[#1C3D6E] hover:bg-gray-50"
-                    }`}
-                  >
-                    {link.label}
-                  </Link>
-                )
-              )}
+              {NAV_LINKS.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setMobileOpen(false)}
+                  className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
+                    link.highlight
+                      ? "bg-[#1C3D6E] text-white"
+                      : "text-gray-700 hover:text-[#1C3D6E] hover:bg-gray-50"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              ))}
               <a
                 href={RESERVATION_URL}
                 target="_blank"

@@ -1,15 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="7" fill="#1C3D6E"/>
-  <!-- Cedar trunk -->
-  <rect x="14.5" y="23" width="3" height="5" rx="1" fill="#C9A227"/>
-  <!-- Bottom branches layer -->
-  <path d="M5 22.5 Q8 20 16 19 Q24 20 27 22.5 Q24 23.5 16 23 Q8 23.5 5 22.5Z" fill="#C9A227"/>
-  <!-- Mid-low branches -->
-  <path d="M7 19 Q10 16.5 16 15.5 Q22 16.5 25 19 Q22 20 16 19.5 Q10 20 7 19Z" fill="#C9A227"/>
-  <!-- Mid branches -->
-  <path d="M9 16 Q12 13.5 16 12.5 Q20 13.5 23 16 Q20 17 16 16.5 Q12 17 9 16Z" fill="#C9A227" opacity="0.95"/>
-  <!-- Upper branches -->
-  <path d="M11 13 Q13 10.5 16 9.5 Q19 10.5 21 13 Q19 14 16 13.5 Q13 14 11 13Z" fill="white" opacity="0.85"/>
-  <!-- Top -->
-  <path d="M13 10.5 Q14.5 8 16 7 Q17.5 8 19 10.5 Q17.5 11.5 16 11 Q14.5 11.5 13 10.5Z" fill="white" opacity="0.7"/>
+  <rect width="32" height="32" rx="6" fill="#1C3D6E"/>
+  <!-- trunk -->
+  <rect x="14.8" y="22.5" width="2.4" height="5" rx="0.8" fill="#C9A227"/>
+  <!-- tier 1 – bottom, widest -->
+  <polygon points="16,19 5,23.5 27,23.5" fill="#C9A227"/>
+  <!-- tier 2 -->
+  <polygon points="16,15.5 7,19.5 25,19.5" fill="#C9A227"/>
+  <!-- tier 3 -->
+  <polygon points="16,12 9.5,15.5 22.5,15.5" fill="#C9A227"/>
+  <!-- tier 4 -->
+  <polygon points="16,8.5 12,12 20,12" fill="#ffffff" opacity="0.9"/>
+  <!-- tip -->
+  <polygon points="16,5.5 13.5,9 18.5,9" fill="#ffffff" opacity="0.75"/>
 </svg>

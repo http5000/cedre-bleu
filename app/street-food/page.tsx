@@ -91,7 +91,7 @@ export default function StreetFood() {
       </div>
 
       {/* STICKY NAV */}
-      <nav className="sticky top-[112px] z-40 bg-[#152f55]/90 backdrop-blur border-b border-white/10">
+      <nav className="sticky top-16 z-40 bg-[#152f55]/90 backdrop-blur border-b border-white/10">
         <div className="max-w-5xl mx-auto px-4 flex overflow-x-auto gap-1 py-2">
           {["sandwichs", "formules", "plats", "manakiches", "mezze-chauds"].map((id) => (
             <a
