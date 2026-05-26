@@ -41,7 +41,7 @@ export const TRANSLATIONS = {
     },
 
     home: {
-      tagline: "Libanais · Lebanese · لبناني",
+      tagline: "Cuisine libanaise maison",
       location: "Lyon 5 · Quai Romain Rolland",
       desc: "Une cuisine libanaise 100% faite maison, avec amour et convivialité.",
       hours: "Mar — Sam · 11h30–14h30 & 19h–22h",
@@ -502,7 +502,7 @@ export const TRANSLATIONS = {
     },
 
     home: {
-      tagline: "Libanais · Lebanese · لبناني",
+      tagline: "Homemade Lebanese cuisine",
       location: "Lyon 5 · Quai Romain Rolland",
       desc: "100% home-cooked Lebanese cuisine, made with love and warmth.",
       hours: "Tue — Sat · 11:30–14:30 & 19:00–22:00",
@@ -963,7 +963,7 @@ export const TRANSLATIONS = {
     },
 
     home: {
-      tagline: "Libanais · Lebanese · لبناني",
+      tagline: "مطبخ لبناني منزلي",
       location: "ليون 5 · كاي رومان رولان",
       desc: "مطبخ لبناني 100٪ بيتي، مصنوع بمحبة وكرم الضيافة.",
       hours: "الثلاثاء — السبت · 11:30–14:30 و19:00–22:00",
