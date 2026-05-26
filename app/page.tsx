@@ -27,18 +27,22 @@ export default function Home() {
             />
           </div>
 
-          <p className="text-[#C9A227] text-sm font-semibold uppercase tracking-[0.3em] mb-3">
-            Spécialités libanaises · Lyon 5
-          </p>
+          <div className="flex items-center justify-center gap-3 mb-5">
+            <div className="h-px w-8 bg-[#C9A227]/60" />
+            <p className="text-[#C9A227] text-xs font-semibold uppercase tracking-[0.25em]">
+              Libanais · Lebanese · <span lang="ar">لبناني</span>
+            </p>
+            <div className="h-px w-8 bg-[#C9A227]/60" />
+          </div>
           <h1
-            className="text-white text-5xl md:text-7xl mb-6 leading-tight"
+            className="text-white text-5xl md:text-7xl mb-3 leading-tight"
             style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontStyle: "italic" }}
           >
             Le Cèdre Bleu
           </h1>
-          <p className="text-gray-200 text-lg md:text-xl max-w-2xl mx-auto mb-8 leading-relaxed">
-            Une cuisine libanaise authentique, faite maison avec amour. Mezzés, grillades,
-            sandwichs et spécialités du Liban.
+          <p className="text-[#C9A227]/80 text-sm tracking-widest uppercase mb-6">Lyon 5 · Quai Romain Rolland</p>
+          <p className="text-gray-200 text-lg md:text-xl max-w-xl mx-auto mb-8 leading-relaxed">
+            Une cuisine libanaise 100% faite maison, avec amour et convivialité.
           </p>
 
           <div className="flex items-center justify-center gap-2 text-gray-300 text-sm mb-10">
@@ -492,7 +496,7 @@ export default function Home() {
 
             <div className="rounded-2xl overflow-hidden shadow-xl h-72 lg:h-96">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2784.076!2d4.8266985!3d45.763797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4ebaaaec6fb3d%3A0xcad75884a8991c3d!2sLe%20C%C3%A8dre%20Bleu!5e0!3m2!1sfr!2sfr!4v1700000000000!5m2!1sfr!2sfr"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2784.076!2d4.8288872!3d45.7637971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4ebaaaec6fb3d%3A0xcad75884a8991c3d!2sLe%20C%C3%A8dre%20Bleu!5e0!3m2!1sfr!2sfr!4v1748262400000!5m2!1sfr!2sfr"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
