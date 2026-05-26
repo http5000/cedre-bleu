@@ -88,7 +88,7 @@ export function Navbar() {
             </svg>
           </a>
           <a
-            href="https://www.google.com/maps/place/Le+C%C3%A8dre+Bleu/@45.7637971,4.8288872,15z"
+            href="https://www.google.com/maps/place/Le+C%C3%A8dre+Bleu/@45.7637971,4.8288872,3059m/data=!3m2!1e3!5s0x47f4ebaaaf575531:0xa22f01393b7d80bd!4m6!3m5!1s0x47f4ebaaaec6fb3d:0xcad75884a8991c3d!8m2!3d45.7637971!4d4.8288872!16s%2Fg%2F1tgw97vw?entry=ttu&g_ep=EgoyMDI2MDUyMC4wIKXMDSoASAFQAw%3D%3D"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-[#C9A227] transition-colors"

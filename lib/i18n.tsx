@@ -124,6 +124,10 @@ export const TRANSLATIONS = {
       },
       voir_carte: "Voir la carte complète",
 
+      google_rating_label: "Noté sur Google",
+      avis_tag: "Ce que disent nos clients",
+      avis_title: "Ils nous font confiance",
+
       reservation_title: "Réservez votre table",
       reservation_desc:
         "Pour un déjeuner ou un dîner, réservez en ligne ou appelez-nous directement.",
@@ -585,6 +589,10 @@ export const TRANSLATIONS = {
       },
       voir_carte: "View full menu",
 
+      google_rating_label: "Rated on Google",
+      avis_tag: "What our guests say",
+      avis_title: "Trusted by our customers",
+
       reservation_title: "Book your table",
       reservation_desc:
         "For lunch or dinner, book online or call us directly.",
@@ -1045,6 +1053,10 @@ export const TRANSLATIONS = {
         ],
       },
       voir_carte: "اعرض القائمة الكاملة",
+
+      google_rating_label: "مُقيَّم على Google",
+      avis_tag: "ما يقوله زبائننا",
+      avis_title: "ثقة عملائنا",
 
       reservation_title: "احجز طاولتك",
       reservation_desc:
